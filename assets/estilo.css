@@ -1,0 +1,64 @@
+header,
+footer,
+#head1 {
+  background-image: url(../assets/img/fondo.jpg);
+  background-size: cover;
+  color: white;
+}
+
+#head1{
+  height: 100vh;
+  display: grid;
+  align-content: center;
+}
+
+#presentacion {
+    background-color: rgba(0,0,0,0.5);
+}
+
+#encabezado{
+  display: flex;
+  #yoimagen, #titulo{
+    align-content: center;
+  }
+  img{
+   border-radius: 50%;
+  }
+}
+
+/*Pantallas pequeñas*/
+@media (max-width: 575px){
+  #presentacion, #yoimagen{
+    display: none;
+  }
+  #titulo{
+    width: 100%;
+  }
+}
+
+/*Pantallas medias*/
+@media (min-width:576px) and (max-width:991px){
+  #yoimagen{
+    display: none;
+  }
+  #titulo{
+    width: 100%;
+  }
+}
+
+/*Pantallas grandes*/
+@media (min-width: 992px){
+  @keyframes animacion {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    } 
+  }
+
+    #encabezado, #presentacion, #piedepagina {
+      animation-name: animacion;
+      animation-duration: 7s;
+    }
+}
